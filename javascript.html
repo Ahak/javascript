@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript question</h1>
+</body>
+<script>
+    // 1
+   let num = 6;
+if (num % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
+// 2
+let a = 10, b = 5, op = "+";
+if (op === "+") console.log(a + b);
+else if (op === "-") console.log(a - b);
+else if (op === "*") console.log(a * b);
+else if (op === "/") console.log(a / b);
+else console.log("Invalid operator");
+// 3
+let num1 =12;
+let num2 = 3;
+let num3 = 10;
+let max_no
+if (num1 >= num2 && num1 >= num3){
+max_no= num1}else if (num2 >= num1 && num2 >= num1){
+max_no = num2}else{
+max_no = num3
+}
+console.log(max_no)
+// 4
+
+let n = 9;
+for (let i = 1; i <= 10; i++) {
+  console.log(`${n} x ${i} = ${n * i}`);
+}
+
+// 5
+let N = 10, sum = 0;
+for (let i = 1; i <= N; i++) {
+  sum += i;
+}
+console.log("Sum:", sum);
+
+// 6
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
+// 7
+function countEvenNumbers(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      count++;
+    }
+  }
+  return count;
+}
+let numbers = [3, 4, 6, 7, 10, 15];
+let result = countEvenNumbers(numbers);
+console.log( result);
+// 8
+function findMax(arr) {
+  let max = arr[0]; 
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; 
+    }
+  }
+
+  return max;
+}
+
+let number = [12, 45, 7, 89, 22, 10];
+let results = findMax(number);
+
+console.log("The largest number is:", results);
+
+// 9
+function removeDuplicates(arr) {
+  let uniqueArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!uniqueArray.includes(arr[i])) {
+      uniqueArray.push(arr[i]);
+    }
+  }
+  return uniqueArray;
+}
+let z = [2, 4, 4, 7, 2, 9, 7, 10];
+let y = removeDuplicates(z);
+console.log("Array without duplicates:", y);
+
+// 10
+function sumArray(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; 
+  }
+
+  return sum;
+}
+let r = [5, 10, 15, 20];
+let s = sumArray(r);
+
+console.log("The sum of all elements is:", s);
+
+// 11
+function findFactorial(num) {
+  let fact = 1;
+  for (let i = 2; i <= num; i++) {
+    fact *= i;
+  }
+  return fact;
+}
+
+let number1 = 5;
+console.log("Factorial:", findFactorial(number1)); 
+// 12
+function isWordPalindrome(word) {
+  let reversed = word.split("").reverse().join("");
+  return word === reversed;
+}
+
+let text1 = "level";
+console.log("Is palindrome?", isWordPalindrome(text1)); 
+// 13
+for (let x = 1; x <= 20; x++) {
+  if (x % 3 === 0 && x % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (x % 3 === 0) {
+    console.log("Fizz");
+  } else if (x % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(x);
+  }
+}
+// 14
+function countVowelsInText(str) {
+  let matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
+}
+
+let text2 = "Programming";
+console.log("Vowel count:", countVowelsInText(text2)); 
+// 15
+function findIndexOfValue(array, value) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) return i;
+  }
+  return -1;
+}
+
+let list1 = [10, 20, 30, 40];
+let target1 = 30;
+console.log("Index of value:", findIndexOfValue(list1, target1));
+
+// 16
+function sortNumbersAscending(nums) {
+  return nums.sort((a, b) => a - b);
+}
+
+let scores = [45, 12, 78, 5, 23];
+console.log("Sorted:", sortNumbersAscending(scores));  
+// 17
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+let tempC = 30;
+console.log("Fahrenheit:", celsiusToFahrenheit(tempC)); 
+// 18
+function findDuplicatesFromArray(items) {
+  let seen = new Set();
+  let duplicates = new Set();
+
+  for (let item of items) {
+    if (seen.has(item)) {
+      duplicates.add(item);
+    }
+    seen.add(item);
+  }
+
+  return Array.from(duplicates);
+}
+
+let data1 = [1, 2, 3, 2, 4, 5, 1];
+console.log("Duplicates:", findDuplicatesFromArray(data1)); 
+// 19
+function isNumberPrime(n) {
+  if (n < 2) return false;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
+
+let value1 = 17;
+console.log("Is prime?", isNumberPrime(value1)); 
+// 20
+function mergeArraysUnique(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
+}
+
+let firstArray = [1, 2, 3];
+let secondArray = [2, 3, 4, 5];
+console.log("Merged array:", mergeArraysUnique(firstArray, secondArray)); // Output: [1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+
+</script>
+</html>
