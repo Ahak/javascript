@@ -6,7 +6,7 @@ if (num % 2 === 0) {
   console.log("Odd");
 }
 // 2
-let a = 10, b = 5, op = "+";
+let a = 10, b = 5, op = "+ , - , * , /";
 if (op === "+") console.log(a + b);
 else if (op === "-") console.log(a - b);
 else if (op === "*") console.log(a * b);
